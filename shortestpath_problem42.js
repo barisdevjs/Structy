@@ -2,6 +2,7 @@ const shortestPath = (edges, nodeA, nodeB) => {
     const graph = buildGraph(edges);
     const visited = new Set([nodeA]);
     const queue = [[nodeA, 0]];
+    queue
     while (queue.length > 0) {
         let [node, dst] = queue.shift();
         if ( node === nodeB ) {
@@ -48,4 +49,4 @@ const buildGraph = (edges) => {
     ['g', 'f']
   ];
   console.log(shortestPath(edges,'v', 'z'))
-  console.log(shortestPath(edges1,'a', 'f'))
+  // console.log(shortestPath(edges1,'a', 'f'))
